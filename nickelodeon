@@ -1,0 +1,92 @@
+<html><head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.ui.min.js"></script><link id="#chromealerabat-link" rel="stylesheet" type="text/css" href="chrome-extension://dacdinoicboceafielngnmjjplncljhj/content.css">
+<script src="https://github.com/videojs/mux.js/releases/latest/download/mux.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/controls.min.css">
+<script defer="" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+  <script src="//www.gstatic.com/eureka/clank/111/cast_sender.js"></script></head>
+  <body style="background-color:#000;">
+    <div data-shaka-player-container="" style="position: absolute; z-index: -1; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; cursor: none;" shaka-controls="true" class="shaka-video-container">
+      <video autoplay="" data-shaka-player="" poster="" id="video" style="width:100%;height:100%;" class="shaka-video" src="blob:https://telewizor.netlify.app/4b162757-93cf-4714-aedd-54f228ad2b9a"></video>
+    <canvas class="shaka-canvas-container"></canvas><div class="shaka-controls-container"><div class="shaka-scrim-container"></div><div class="shaka-server-side-ad-container"></div><div class="shaka-bottom-controls shaka-no-propagation"><div class="shaka-ad-controls shaka-hidden"><div class="shaka-ad-position shaka-hidden"><span class="shaka-ad-position-span"></span></div><div class="shaka-ad-counter"><span class="shaka-ad-counter-span"></span></div></div><div class="shaka-controls-button-panel shaka-show-controls-on-mouse-over"><button type="button" class="shaka-small-play-button material-icons-round shaka-tooltip" aria-label="Wstrzymaj">pause</button><button type="button" class="shaka-current-time" aria-label="Przejdź do transmisji na żywo">- 0:00:15</button><div class="shaka-spacer" aria-hidden="true"></div><button type="button" class="shaka-mute-button material-icons-round shaka-tooltip" aria-label="Wycisz">volume_up</button><div class="shaka-range-container shaka-volume-bar-container" style="background: linear-gradient(to right, rgb(255, 255, 255) 100%, rgba(255, 255, 255, 0.54) 100%, rgba(255, 255, 255, 0.54) 100%);"><input class="shaka-range-element shaka-volume-bar" type="range" step="any" min="0" max="1" aria-label="Głośność"></div><button type="button" class="shaka-fullscreen-button material-icons-round shaka-tooltip" aria-label="Pełny ekran">fullscreen</button><button type="button" class="shaka-overflow-menu-button shaka-no-propagation material-icons-round shaka-tooltip" aria-label="Więcej ustawień">more_vert</button></div><div class="shaka-range-container shaka-seek-bar-container" style="background: linear-gradient(to right, rgb(255, 255, 255) 99.6922%, rgb(255, 255, 255) 99.6922%, rgb(255, 255, 255) 99.8543%, rgba(255, 255, 255, 0.54) 99.8543%, rgba(255, 255, 255, 0.54) 99.9775%, rgba(255, 255, 255, 0.3) 99.9775%);"><div class="shaka-ad-markers"></div><input class="shaka-range-element shaka-seek-bar shaka-no-propagation shaka-show-controls-on-mouse-over" type="range" step="any" min="229423427.69000006" max="229434165.61000004" aria-label="Szukaj"></div></div><div class="shaka-overflow-menu shaka-no-propagation shaka-show-controls-on-mouse-over shaka-hidden"><button type="button" class="shaka-overflow-button shaka-caption-button shaka-tooltip-status shaka-hidden" aria-pressed="false" aria-label="Napisy" shaka-status="Wyłączone"><i class="material-icons-round">closed_caption_disabled</i><label class="shaka-overflow-button-label shaka-overflow-menu-only"><span>Napisy</span><span class="shaka-current-selection-span">Wyłączone</span></label></button><button type="button" class="shaka-overflow-button shaka-resolution-button shaka-tooltip-status" shaka-status="Automatycznie" aria-label="Rozdzielczość"><i class="material-icons-round">settings</i><label class="shaka-overflow-button-label shaka-overflow-menu-only"><span>Rozdzielczość</span><span class="shaka-current-selection-span">Automatycznie</span></label></button><button type="button" class="shaka-overflow-button shaka-language-button shaka-tooltip-status" aria-label="Język" shaka-status="Polski"><i class="material-icons-round">language</i><label class="shaka-overflow-button-label shaka-overflow-menu-only"><span>Język</span><span class="shaka-current-selection-span">Polski</span></label></button><button type="button" class="shaka-pip-button shaka-tooltip" aria-label="Włącz tryb obrazu w&nbsp;obrazie"><i class="material-icons-round">picture_in_picture_alt</i><label class="shaka-overflow-button-label shaka-overflow-menu-only"><span>Obraz w&nbsp;obrazie</span><span class="shaka-current-selection-span">Wyłączone</span></label></button><button type="button" class="shaka-cast-button shaka-tooltip shaka-hidden" aria-pressed="false" aria-label="Przesyłaj..."><i class="material-icons-round">cast</i><label class="shaka-overflow-button-label shaka-overflow-menu-only"><span>Przesyłaj...</span><span class="shaka-current-selection-span">Wyłączone</span></label></button><button type="button" class="shaka-overflow-button shaka-playbackrate-button shaka-tooltip-status" aria-label="Szybkość odtwarzania" shaka-status="1x"><i class="material-icons-round">slow_motion_video</i><label class="shaka-overflow-button-label shaka-overflow-menu-only"><span>Szybkość odtwarzania</span><span class="shaka-current-selection-span">1x</span></label></button></div><div class="shaka-no-propagation shaka-show-controls-on-mouse-over shaka-settings-menu shaka-hidden shaka-text-languages"><button type="button" class="shaka-back-to-overflow-button" aria-label="Wstecz"><i class="material-icons-round">arrow_back</i><span>Napisy</span></button><button type="button" class="shaka-turn-captions-off-button" aria-selected="true"><span class="shaka-auto-span shaka-chosen-item">Wyłączone</span><i class="material-icons-round shaka-chosen-item" aria-hidden="true">done</i></button></div><div class="shaka-no-propagation shaka-show-controls-on-mouse-over shaka-settings-menu shaka-hidden shaka-resolutions"><button type="button" class="shaka-back-to-overflow-button" aria-label="Rozdzielczość"><i class="material-icons-round">arrow_back</i><span>Rozdzielczość</span></button><button type="button" class="explicit-resolution"><span>540p</span></button><button type="button" class="explicit-resolution"><span>404p</span></button><button type="button" class="explicit-resolution"><span>288p</span></button><button type="button" class="shaka-enable-abr-button" aria-selected="true"><span class="shaka-auto-span shaka-chosen-item">Automatycznie</span><i class="material-icons-round shaka-chosen-item" aria-hidden="true">done</i></button></div><div class="shaka-no-propagation shaka-show-controls-on-mouse-over shaka-settings-menu shaka-hidden shaka-audio-languages"><button type="button" class="shaka-back-to-overflow-button" aria-label="Wstecz"><i class="material-icons-round">arrow_back</i><span>Język</span></button><button type="button" aria-selected="true"><span class="shaka-chosen-item">Polski</span><i class="material-icons-round shaka-chosen-item" aria-hidden="true">done</i></button></div><div class="shaka-no-propagation shaka-show-controls-on-mouse-over shaka-settings-menu shaka-hidden shaka-playback-rates"><button type="button" class="shaka-back-to-overflow-button" aria-label="Wstecz"><i class="material-icons-round">arrow_back</i><span>Szybkość odtwarzania</span></button><button type="button"><span>0.5x</span></button><button type="button"><span>0.75x</span></button><button type="button" aria-selected="true"><span class="shaka-chosen-item">1x</span><i class="material-icons-round shaka-chosen-item" aria-hidden="true">done</i></button><button type="button"><span>1.25x</span></button><button type="button"><span>1.5x</span></button><button type="button"><span>1.75x</span></button><button type="button"><span>2x</span></button></div></div><div class="shaka-client-side-ad-container shaka-hidden"></div><div class="shaka-spinner-container shaka-hidden"><div class="shaka-spinner"><svg class="shaka-spinner-svg" viewBox="0 0 30 30"><circle class="shaka-spinner-path" cx="15" cy="15" r="14.5" fill="none" stroke-width="1" stroke-miterlimit="10"></circle></svg></div></div><div class="shaka-text-container" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-end;"></div></div>
+
+ <script> 
+      document.addEventListener('contextmenu', event=> event.preventDefault()); 
+      document.onkeydown = function(e) { 
+      if(event.keyCode == 123) { 
+      return false; 
+      } 
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
+      return false; 
+      } 
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+      return false; 
+      } 
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
+      return false; 
+      } 
+      } 
+      </script> 
+  
+
+<script>
+    const manifestUri =
+    'https://lb2-e1-91.pluscdn.pl/ch/1455170/71/dash/d94a55b2/live.mpd';
+    async function init() {
+    // When using the UI, the player is made automatically by the UI object.
+    const video = document.getElementById('video');
+    const ui = video['ui'];
+    const controls = ui.getControls();
+    const player = controls.getPlayer();
+
+    // Attach player and ui to the window to make it easy to access in the JS console.
+    window.player = player;
+    window.ui = ui;
+
+    // Listen for error events.
+    player.addEventListener('error', onPlayerErrorEvent);
+    player.configure({
+      drm: {
+        clearKeys: {
+          "22d66c7e835141da953b7bc747e87b09": "77d0d6401019e4415843024a7259a6b2",
+        }
+      }
+    });
+    controls.addEventListener('error', onUIErrorEvent);
+
+    // Try to load a manifest.
+    // This is an asynchronous process.
+    try {
+        await player.load(manifestUri);
+        // This runs if the asynchronous load is successful.
+    } catch (error) {
+        onPlayerError(error);
+    }
+    }
+
+    function onPlayerErrorEvent(errorEvent) {
+    // Extract the shaka.util.Error object from the event.
+    onPlayerError(event.detail);
+    }
+
+    function onPlayerError(error) {
+    // Handle player error
+    console.error('Error code', error.code, 'object', error);
+    }
+
+    function onUIErrorEvent(errorEvent) {
+    // Extract the shaka.util.Error object from the event.
+    onPlayerError(event.detail);
+    }
+
+    function initFailed(errorEvent) {
+    // Handle the failure to load; errorEvent.detail.reasonCode has a
+    // shaka.ui.FailReasonCode describing why.
+    console.error('Unable to load the UI library!');
+    }
+
+    // Listen to the custom shaka-ui-loaded event, to wait until the UI is loaded.
+    document.addEventListener('shaka-ui-loaded', init);
+    // Listen to the custom shaka-ui-load-failed event, in case Shaka Player fails
+    // to load (e.g. due to lack of browser support).
+    document.addEventListener('shaka-ui-load-failed', initFailed);
+</script></body></html>
