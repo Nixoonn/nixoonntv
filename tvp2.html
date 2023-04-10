@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.ui.min.js"></script>
+<script src="https://github.com/videojs/mux.js/releases/latest/download/mux.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/controls.min.css"/>
+<script defer src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+  </head>
+  <body>
+    <div data-shaka-player-container style='position:absolute;z-index: -1;top: 0;left: 0;width: 100%; height: 100%;object-fit: cover;'>
+      <video autoplay data-shaka-player poster="" id='video' style='width:100%;height:100%;'></video>
+    </div>
+<body style="background-color:#000;">
+ <script> 
+      document.addEventListener('contextmenu', event=> event.preventDefault()); 
+      document.onkeydown = function(e) { 
+      if(event.keyCode == 123) { 
+      return false; 
+      } 
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
+      return false; 
+      } 
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+      return false; 
+      } 
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
+      return false; 
+      } 
+      } 
+      </script> 
+  </body>
+</html>
+<script>
+    const manifestUri =
+    'https://ec01.gdn2.cache.orange.pl/dai/org1/vb/tvp2hd/index.m3u8';
+    async function init() {
+    // When using the UI, the player is made automatically by the UI object.
+    const video = document.getElementById('video');
+    const ui = video['ui'];
+    const controls = ui.getControls();
+    const player = controls.getPlayer();
+
+    // Attach player and ui to the window to make it easy to access in the JS console.
+    window.player = player;
+    window.ui = ui;
+
+    // Listen for error events.
+    player.addEventListener('error', onPlayerErrorEvent);
+    player.configure({
+      drm: {
+        clearKeys: {
+          "a9beeed6cc1ae10023eb45260f467368": "3c808e898eee25d6d0cc8be446071c35"
+        }
+      }
+    });
+    controls.addEventListener('error', onUIErrorEvent);
+
+    // Try to load a manifest.
+    // This is an asynchronous process.
+    try {
+        await player.load(manifestUri);
+        // This runs if the asynchronous load is successful.
+    } catch (error) {
+        onPlayerError(error);
+    }
+    }
+
+    function onPlayerErrorEvent(errorEvent) {
+    // Extract the shaka.util.Error object from the event.
+    onPlayerError(event.detail);
+    }
+
+    function onPlayerError(error) {
+    // Handle player error
+    console.error('Error code', error.code, 'object', error);
+    }
+
+    function onUIErrorEvent(errorEvent) {
+    // Extract the shaka.util.Error object from the event.
+    onPlayerError(event.detail);
+    }
+
+    function initFailed(errorEvent) {
+    // Handle the failure to load; errorEvent.detail.reasonCode has a
+    // shaka.ui.FailReasonCode describing why.
+    console.error('Unable to load the UI library!');
+    }
+
+    // Listen to the custom shaka-ui-loaded event, to wait until the UI is loaded.
+    document.addEventListener('shaka-ui-loaded', init);
+    // Listen to the custom shaka-ui-load-failed event, in case Shaka Player fails
+    // to load (e.g. due to lack of browser support).
+    document.addEventListener('shaka-ui-load-failed', initFailed);
+</script>
